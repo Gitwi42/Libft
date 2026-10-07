@@ -6,7 +6,7 @@
 #    By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/06 17:47:25 by root              #+#    #+#              #
-#    Updated: 2026/10/07 08:50:14 by root             ###   ########.fr        #
+#    Updated: 2026/10/07 09:15:29 by root             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ SRCS = ft_atoi.c \
 	ft_strtrim.c \
 	ft_split.c \
 	ft_itoa.c \
-	ft_strmapi \
+	ft_strmapi.c \
+	ft_striteri.c \
 	
 
 OBJS = $(SRCS:.c=.o)
