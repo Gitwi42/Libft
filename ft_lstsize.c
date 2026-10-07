@@ -6,7 +6,7 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 14:18:45 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 14:31:49 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:55:31 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ unsigned int	ft_lstsize(t_list *lst)
 		return (count);
 	while (lst->next)
 	{
-		lst = lst -> next;
+		lst = lst->next;
 		count++;
 	}
 	return (count + 1);
