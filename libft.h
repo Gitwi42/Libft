@@ -6,7 +6,7 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 04:03:20 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 09:15:31 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 09:20:25 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void 	ft_putchar_fd(char c, int fd);
 
 #endif
