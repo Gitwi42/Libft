@@ -6,7 +6,7 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 08:48:28 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 09:00:21 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:33:41 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*dest;
+	char			*dest;
 	unsigned int	index;
-	size_t		len;
+	size_t			len;
 
 	index = 0;
 	len = ft_strlen(s);

@@ -6,7 +6,7 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 12:33:14 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 12:57:02 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:34:03 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 
 	node = malloc (sizeof (t_list));
 	if (!node)
-		return	(NULL);
+		return (NULL);
 	node->content = content;
 	node->next = NULL;
 	return (node);
