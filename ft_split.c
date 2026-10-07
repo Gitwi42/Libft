@@ -6,7 +6,7 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 11:49:48 by root              #+#    #+#             */
-/*   Updated: 2026/10/06 17:10:16 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 08:37:18 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,17 @@ static	void	ft_freeerror(char const *dest, size_t nb)
 	size_t	i;
 
 	i = 0;
-	while(i < nb)
+	while (i < nb)
 		free(dest[i++]);
 	free(dest);
 }
 
 static int	ft_getwordstart(char const *s, char c, size_t nb)
 {
-	int	start;
+	int		start;
 	size_t	count;
 	size_t	i;
-	
+
 	i = 0;
 	count = 0;
 	start = -1;
@@ -60,10 +60,11 @@ static int	ft_getwordstart(char const *s, char c, size_t nb)
 	}
 	return (start);
 }
+
 static char	*ft_getwordfromstring(char const *s, char c, size_t nb)
 {
 	size_t	i;
-	int	start;
+	int		start;
 	char	*word;
 
 	i = 0;
@@ -78,7 +79,7 @@ static char	*ft_getwordfromstring(char const *s, char c, size_t nb)
 	while (s[start] != c && s[start])
 		word[i++] = s[start++];
 	word[i] = '\0';
-	return (word);	
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
@@ -86,14 +87,14 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	wordnb;
 	char	**dest;
-	
+
 	wordnb = ft_wordcount(s, c);
 	dest = malloc(sizeof (char *) * (wordnb + 1));
 	if (!dest)
 		return (NULL);
 	i = 1;
 	while (i <= wordnb)
-	{	
+	{
 		dest[i - 1] = ft_getwordfromstring(s, c, i);
 		if (dest[i - 1] == 0)
 		{
