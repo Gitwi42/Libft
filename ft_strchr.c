@@ -6,9 +6,11 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 19:47:02 by root              #+#    #+#             */
-/*   Updated: 2026/10/01 03:23:09 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:09:57 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

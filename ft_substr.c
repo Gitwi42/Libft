@@ -6,11 +6,12 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 08:04:22 by root              #+#    #+#             */
-/*   Updated: 2026/10/06 08:29:16 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:10:27 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

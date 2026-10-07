@@ -6,11 +6,12 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 20:32:53 by root              #+#    #+#             */
-/*   Updated: 2026/10/01 03:23:09 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:09:30 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

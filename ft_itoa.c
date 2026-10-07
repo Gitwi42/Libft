@@ -6,12 +6,13 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 07:08:31 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 08:35:58 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:09:24 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 static int	ft_isnegative(int n)
 {

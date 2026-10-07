@@ -6,11 +6,12 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 16:18:59 by root              #+#    #+#             */
-/*   Updated: 2026/08/29 16:55:51 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:09:41 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

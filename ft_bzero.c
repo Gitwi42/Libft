@@ -6,11 +6,12 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 16:44:07 by root              #+#    #+#             */
-/*   Updated: 2026/08/29 17:03:25 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:08:07 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

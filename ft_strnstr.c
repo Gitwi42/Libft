@@ -6,11 +6,12 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 01:51:05 by root              #+#    #+#             */
-/*   Updated: 2026/10/01 03:36:17 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:10:18 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *base, const char *str, size_t len)
 {

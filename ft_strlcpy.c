@@ -6,11 +6,12 @@
 /*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 15:21:03 by root              #+#    #+#             */
-/*   Updated: 2026/10/01 03:36:17 by root             ###   ########.fr       */
+/*   Updated: 2026/10/07 14:10:08 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
