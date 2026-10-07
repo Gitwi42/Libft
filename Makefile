@@ -6,7 +6,7 @@
 #    By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/06 17:47:25 by root              #+#    #+#              #
-#    Updated: 2026/10/07 14:52:44 by root             ###   ########.fr        #
+#    Updated: 2026/10/07 14:57:28 by root             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS = ft_atoi.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
+	ft_lstadd_back.c \
 
 OBJS = $(SRCS:.c=.o)
 
