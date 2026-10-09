@@ -6,7 +6,7 @@
 /*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 04:03:20 by mhinojos          #+#    #+#             */
-/*   Updated: 2026/10/08 11:15:29 by mhinojos         ###   ########.fr       */
+/*   Updated: 2026/10/09 12:56:24 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 t_list			*ft_lstnew(void *content);
 t_list			*ft_lstlast(t_list *lst);
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 int				ft_isalnum(int c);

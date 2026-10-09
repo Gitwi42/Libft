@@ -6,7 +6,7 @@
 /*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 14:42:23 by mhinojos          #+#    #+#             */
-/*   Updated: 2026/10/08 11:42:22 by mhinojos         ###   ########.fr       */
+/*   Updated: 2026/10/09 12:54:09 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	if (n == 0)
 		return (dest);
-	else if ((d + (n - 1) < s) || (s + (n - 1) < d))
+	else if ((d + (n - 1) < s) || (s + (n - 1) < d || d < s))
 	{
 		i = 0;
 		while (i++ < n)

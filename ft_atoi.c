@@ -6,13 +6,13 @@
 /*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 02:17:07 by mhinojos          #+#    #+#             */
-/*   Updated: 2026/10/09 11:51:40 by mhinojos         ###   ########.fr       */
+/*   Updated: 2026/10/09 12:35:55 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	is_negative;

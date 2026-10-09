@@ -6,7 +6,7 @@
 /*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 19:58:40 by mhinojos          #+#    #+#             */
-/*   Updated: 2026/10/08 12:13:54 by mhinojos         ###   ########.fr       */
+/*   Updated: 2026/10/09 12:33:03 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *str, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (dest[i] == c)
+		if ((unsigned char)dest[i] == (unsigned char)c)
 			return (&dest[i]);
 		i--;
 	}
