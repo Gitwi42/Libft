@@ -6,7 +6,7 @@
 #    By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/06 17:47:25 by mhinojos          #+#    #+#              #
-#    Updated: 2026/10/08 12:53:44 by mhinojos         ###   ########.fr        #
+#    Updated: 2026/10/09 11:29:14 by mhinojos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,6 @@ FLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	make clean
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 08:04:22 by mhinojos          #+#    #+#             */
-/*   Updated: 2026/10/08 12:31:08 by mhinojos         ###   ########.fr       */
+/*   Updated: 2026/10/09 11:52:45 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!dest)
 		return (NULL);
 	while (index++ < slen)
-		dest[index - 1] = s[start + index- 1];
+		dest[index - 1] = s[start + index - 1];
 	dest[index - 1] = '\0';
 	return (dest);
 }

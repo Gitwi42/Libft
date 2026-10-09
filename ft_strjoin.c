@@ -6,7 +6,7 @@
 /*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 08:47:59 by mhinojos          #+#    #+#             */
-/*   Updated: 2026/10/08 11:59:44 by mhinojos         ###   ########.fr       */
+/*   Updated: 2026/10/09 11:29:40 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		dest[i - 1] = s1[i - 1];
 	while (s2[j++])
 		dest[i + j - 1] = s2[j - 1];
-	dest[i + j - 1] = '\0';
+	dest[i + j - 2] = '\0';
 	return (dest);
 }
