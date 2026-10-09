@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/01 04:03:20 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 14:58:00 by root             ###   ########.fr       */
+/*   Created: 2026/10/01 04:03:20 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 11:15:29 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,14 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstdelone(t_list *lst, void (*del)(void *));
+void			ft_lstclear(t_list **lst, void (*del)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
 size_t			ft_strlcat(char *dest, const char *src, size_t dstsize);
 size_t			ft_strlcpy(char *dest, const char *src, size_t n);
 size_t			ft_strlen(const char *str);
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+					void (*del)(void *));
 t_list			*ft_lstnew(void *content);
 t_list			*ft_lstlast(t_list *lst);
 int				ft_atoi(char *str);

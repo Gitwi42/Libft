@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/06 08:04:22 by mhinojos          #+#    #+#             */
-/*   Updated: 2026/10/08 12:31:08 by mhinojos         ###   ########.fr       */
+/*   Created: 2026/10/07 16:13:17 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 11:13:32 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*dest;
-	size_t	slen;
-	size_t	index;
+	t_list	*dest;
+	t_list	*dstemp;
+	t_list	*lstemp;
+	t_list	*newnode;
 
-	index = 0;
-	slen = ft_strlen(s);
-	if (start >= slen)
-		slen = 0;
-	else if ((slen - start) > len)
-		slen = len;
-	dest = malloc(sizeof(char) * (slen + 1));
+	if (lst == NULL)
+		return (NULL);
+	dest = ft_lstnew(f(lst->content));
 	if (!dest)
 		return (NULL);
-	while (index++ < slen)
-		dest[index - 1] = s[start + index- 1];
-	dest[index - 1] = '\0';
+	dstemp = dest;
+	lstemp = lst->next;
+	while (lstemp)
+	{
+		newnode = ft_lstnew(f(lstemp->content));
+		if (!newnode)
+		{
+			ft_lstclear(&dest, del);
+			return (NULL);
+		}
+		dstemp->next = newnode;
+		dstemp = newnode;
+		lstemp = lstemp->next;
+	}
 	return (dest);
 }

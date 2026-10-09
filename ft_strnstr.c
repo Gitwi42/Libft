@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/01 01:51:05 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 14:10:18 by root             ###   ########.fr       */
+/*   Created: 2026/10/01 01:51:05 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 12:10:00 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,27 @@
 
 char	*ft_strnstr(const char *base, const char *str, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
+	char	*dstr;
+	char	*dbase;
 
 	i = 0;
 	j = 0;
-	if (len <= 0)
+	dstr = (char *)str;
+	dbase = (char *)base;
+	if (len == 0)
 		return (NULL);
-	if (!str[0])
-		return (&base[0]);
+	if (!dstr[0])
+		return (&dbase[0]);
 	while (i < len)
 	{
 		j = 0;
-		while (i + j < len && base[i + j] == str[j])
+		while (i + j < len && dbase[i + j] == dstr[j])
 		{
 			j++;
-			if (!str[j])
-				return (&base[i]);
+			if (!dstr[j])
+				return (&dbase[i]);
 		}
 		i++;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/06 08:47:59 by root              #+#    #+#             */
-/*   Updated: 2026/10/06 11:42:49 by root             ###   ########.fr       */
+/*   Created: 2026/10/06 08:47:59 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 11:59:44 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s1[i])
-		dest[i] = s1[i++];
-	while (s2[j])
-		dest[i + j] = s2[j++];
-	dest[i + j] = '\0';
+	while (s1[i++])
+		dest[i - 1] = s1[i - 1];
+	while (s2[j++])
+		dest[i + j - 1] = s2[j - 1];
+	dest[i + j - 1] = '\0';
 	return (dest);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/04 17:40:37 by root              #+#    #+#             */
-/*   Updated: 2026/10/01 04:27:17 by root             ###   ########.fr       */
+/*   Created: 2026/09/04 17:40:37 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 12:00:41 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	else if (dstsize - 1 >= j)
 	{
 		while (src[i] && ((j + i) < dstsize - 1))
-			dest[j + i] = src[i++];
+		{
+			dest[j + i] = src[i];
+			i++;
+		}
 		dest[j + i] = '\0';
 	}
 	else

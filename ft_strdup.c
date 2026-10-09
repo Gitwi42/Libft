@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/01 04:09:06 by root              #+#    #+#             */
-/*   Updated: 2026/10/01 04:26:35 by root             ###   ########.fr       */
+/*   Created: 2026/10/01 04:09:06 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 11:52:54 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*ft_strdup(const char *s)
 	if (!dest)
 		return (0);
 	i = 0;
-	while (i < len)
-		dest[i] = s[i++];
-	dest[i] = '\0';
+	while (i++ < len)
+		dest[i - 1] = s[i - 1];
+	dest[i - 1] = '\0';
 	return (dest);
 }

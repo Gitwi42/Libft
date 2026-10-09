@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/03 14:42:23 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 14:09:38 by root             ###   ########.fr       */
+/*   Created: 2026/09/03 14:42:23 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 11:42:22 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	if (n == 0)
 		return (dest);
-	else if ((d + (n - 1) < s) || d > s)
+	else if ((d + (n - 1) < s) || (s + (n - 1) < d))
 	{
 		i = 0;
-		while (i < n)
-			d[i] = s[i++];
+		while (i++ < n)
+			d[i - 1] = s[i - 1];
 	}
 	else
 	{
-		i = n - 1;
-		while (i > 0)
-			d[i] = s[i--];
-		d[i] = s[i];
+		i = n;
+		while (i-- > 0)
+			d[i] = s[i];
 	}
 	return (dest);
 }

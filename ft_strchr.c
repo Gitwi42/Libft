@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/04 19:47:02 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 14:09:57 by root             ###   ########.fr       */
+/*   Created: 2026/09/04 19:47:02 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 11:51:16 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	int		i;
+	char	*dest;
 
+	dest = (char *)str;
 	i = 0;
-	while (str[i])
+	while (dest[i])
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		if (dest[i] == c)
+			return (&dest[i]);
 		i++;
 	}
 	if (c == '\0')
-		return (&str[i]);
+		return (&dest[i]);
 	return (0);
 }

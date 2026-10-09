@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/06 11:49:48 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 08:37:18 by root             ###   ########.fr       */
+/*   Created: 2026/10/06 11:49:48 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 12:44:05 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,16 @@ static int	ft_wordcount(char const *s, char c)
 	return (count);
 }
 
-static	void	ft_freeerror(char const *dest, size_t nb)
+static	void	ft_freeerror(char **dest, size_t nb)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < nb)
-		free(dest[i++]);
+	{
+		free(dest[i]);
+		i++;
+	}
 	free(dest);
 }
 

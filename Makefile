@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+         #
+#    By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/10/06 17:47:25 by root              #+#    #+#              #
-#    Updated: 2026/10/07 14:57:28 by root             ###   ########.fr        #
+#    Created: 2026/10/06 17:47:25 by mhinojos          #+#    #+#              #
+#    Updated: 2026/10/08 12:53:44 by mhinojos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,6 @@ SRCS = ft_atoi.c \
 	ft_substr.c \
 	ft_tolower.c \
 	ft_toupper.c \
-	ft_substr.c \
-	ft_strjoin.c \
 	ft_strtrim.c \
 	ft_split.c \
 	ft_itoa.c \
@@ -53,19 +51,21 @@ SRCS = ft_atoi.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
 	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c \
 
 OBJS = $(SRCS:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
 %.o: %.c
-	cc -c $< -o $@
+	@cc $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	cc $(OBJS) $(FLAGS) -o $(NAME)
-	./$(NAME)
-	$(MAKE) fclean
-	clear
+	ar rcs $(NAME) $(OBJS)
+	make clean
 
 all: $(NAME)
 

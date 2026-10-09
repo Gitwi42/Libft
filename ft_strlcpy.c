@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <mhinojos@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: mhinojos <mhinojos@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/03 15:21:03 by root              #+#    #+#             */
-/*   Updated: 2026/10/07 14:10:08 by root             ###   ########.fr       */
+/*   Created: 2026/09/03 15:21:03 by mhinojos          #+#    #+#             */
+/*   Updated: 2026/10/08 12:02:24 by mhinojos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 		count++;
 	if (n == 0)
 		return (count);
-	if (count + 1 < n)
+	if (count + 1 <= n)
 	{
-		while (i < count)
-			dest[i] = src[i++];
+		while (i++ < count)
+			dest[i - 1] = src[i - 1];
 	}
 	else
 	{
-		while (i < n - 1)
-			dest[i] = src[i++];
+		while (i++ < n - 1)
+			dest[i - 1] = src[i - 1];
 	}
-	dest[i] = '\0';
+	dest[i - 1] = '\0';
 	return (count);
 }
